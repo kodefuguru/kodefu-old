@@ -1,4 +1,4 @@
-﻿namespace Kodefu.Tests
+﻿namespace Kodefu
 {
     using System;
     using System.Collections.Generic;

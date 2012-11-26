@@ -10,5 +10,10 @@
         {
             return sequence.ToArray();
         }
+
+        public static IEnumerable<T> Difference<T>(this IEnumerable<T> left, IEnumerable<T> right)
+        {
+            return left.Except(right).Union(right.Except(left));
+        }
     }
 }

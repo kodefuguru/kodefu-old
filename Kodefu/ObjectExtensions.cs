@@ -1,8 +1,10 @@
 ﻿namespace Kodefu
 {
     using System;
-    using System.Linq;
 
+    /// <summary>
+    /// LinqToObjects can't be used from within the same namespace containing this code.
+    /// </summary>
     public static class ObjectExtensions
     {
         public static TResult Select<T, TResult>(this T item, Func<T, TResult> selector)

@@ -7,7 +7,7 @@
     <ProjectGuid>{61509924-FE57-411E-88A2-BC53AF01613E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kodefu.Tests</RootNamespace>
+    <RootNamespace>Kodefu</RootNamespace>
     <AssemblyName>Kodefu.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mathematics\VectorTests.cs" />
     <Compile Include="FunctionTests.cs" />
     <Compile Include="LinqToFunctionsSamples.cs" />
     <Compile Include="LinqToObjectTests.cs" />

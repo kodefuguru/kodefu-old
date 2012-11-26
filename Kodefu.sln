@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodefu", "Kodefu\Kodefu.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodefu.Tests", "Kodefu.Tests\Kodefu.Tests.csproj", "{61509924-FE57-411E-88A2-BC53AF01613E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodefu.Specifications", "Kodefu.Specifications\Kodefu.Specifications.csproj", "{19701D2C-37AE-4923-AF02-0C9F30A03CCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{61509924-FE57-411E-88A2-BC53AF01613E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61509924-FE57-411E-88A2-BC53AF01613E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61509924-FE57-411E-88A2-BC53AF01613E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19701D2C-37AE-4923-AF02-0C9F30A03CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19701D2C-37AE-4923-AF02-0C9F30A03CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19701D2C-37AE-4923-AF02-0C9F30A03CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19701D2C-37AE-4923-AF02-0C9F30A03CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
