@@ -1,8 +1,9 @@
-﻿namespace Kodefu.Mathematics
+﻿namespace Kodefu.Math
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Kodefu.Collections;
     
     public static class Graph
     {
@@ -80,7 +81,7 @@
 
         private void CreateEdges(IEnumerable<IEnumerable<T>> edges)
         {
-            this.edges.AddRange(edges.Distinct(new Edge.SequenceParser()).Select(seq => new Edge(this, seq)));
+            this.edges.AddRange(edges.Where(e => e.Distinct().Count() > 1).Distinct(new Edge.SequenceParser()).Select(seq => new Edge(this, seq)));
         }
 
         public Graph<TResult> Select<TResult>(Func<T, TResult> selector)
@@ -94,7 +95,7 @@
             var combined = this.Select(n => other.Select(o => selector(n, o)));
             var expand = new Graph<TResult>(combined.Vertices.SelectMany(g => g.Vertices),
                                             combined.Vertices.SelectMany(g => g.Edges.Select(e => e.Vertices))
-                                            .Concat(combined.Edges.SelectMany(e => e.Vertices.First().Vertices.SelectMany(v => e.Vertices.Last().Vertices.Select(v2 => new[] { v, v2 })))));
+                                                             .Concat(combined.Edges.SelectMany(e => e.Vertices.First().Vertices.SelectMany(v => e.Vertices.Last().Vertices.Select(v2 => new[] { v, v2 })))));
             // This isn't correct yet. Need to ensure all edges then fold.
             return expand;
         }
@@ -134,6 +135,11 @@
             public bool AttachedTo(T vertex)
             {
                 return vertex.Equals(vertex1) || vertex.Equals(vertex2);
+            }
+
+            public bool IsLoop()
+            {
+                return vertex1.Equals(vertex2);
             }
 
             public override int GetHashCode()
@@ -207,7 +213,7 @@
 
                 public int GetHashCode(IEnumerable<T> sequence)
                 {
-                    return sequence.GetHashCode();
+                    return sequence.Sum(item => item.GetHashCode());
                 }
             }
         }

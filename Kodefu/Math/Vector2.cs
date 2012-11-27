@@ -1,4 +1,4 @@
-namespace Kodefu.Mathematics
+namespace Kodefu.Math
 {
     using System;
 
@@ -91,6 +91,11 @@ namespace Kodefu.Mathematics
         public static implicit operator Vector2(Vector<float, float> vector)
         {
             return new Vector2(vector.X, vector.Y);
+        }
+
+        public static implicit operator Vector2(Point2 point)
+        {
+            return new Vector2(point.X, point.Y);
         }
 
         public static implicit operator Vector2(Tuple<float, float> tuple)

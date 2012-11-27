@@ -1,4 +1,4 @@
-﻿namespace Kodefu
+﻿namespace Kodefu.Collections
 {
     using System;
     using System.Collections.Generic;

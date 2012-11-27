@@ -1,4 +1,4 @@
-﻿namespace Kodefu.Mathematics
+﻿namespace Kodefu.Math
 {
     using System;
 
@@ -29,6 +29,16 @@
         public static Degree operator -(Degree left, Degree right)
         {
             return new Degree(left.value - right.value);
+        }
+
+        public static Degree operator *(Degree left, Degree right)
+        {
+            return new Degree(left.value * right.value);
+        }
+
+        public static Degree operator /(Degree left, Degree right)
+        {
+            return new Degree(left.value / right.value);
         }
 
         public static implicit operator float(Degree degree)

@@ -14,7 +14,7 @@
 
             var hypotenuse = from h in square
                              from w in square
-                             select Math.Sqrt(h + w);
+                             select (h + w).SquareRoot();
 
             hypotenuse.Should().BeOfType<Func<int, int, double>>()
                       .And.Should().NotBeNull();

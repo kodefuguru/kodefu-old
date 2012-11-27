@@ -1,4 +1,4 @@
-﻿namespace Kodefu.Mathematics
+﻿namespace Kodefu.Math
 {
     using System;
     using System.Linq;
@@ -42,14 +42,24 @@
             return (int)radian.value;
         }
 
-        public static Degree operator +(Radian left, Radian right)
+        public static Radian operator +(Radian left, Radian right)
         {
             return new Radian(left.value + right.value);
         }
 
-        public static Degree operator -(Radian left, Radian right)
+        public static Radian operator -(Radian left, Radian right)
         {
             return new Radian(left.value - right.value);
+        }
+
+        public static Radian operator *(Radian left, Radian right)
+        {
+            return new Radian(left.value * right.value);
+        }
+
+        public static Radian operator /(Radian left, Radian right)
+        {
+            return new Radian(left.value / right.value);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Kodefu.Mathematics
+﻿namespace Kodefu.Math
 {
     using System;
 

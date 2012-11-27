@@ -1,4 +1,4 @@
-﻿namespace Kodefu.Mathematics
+﻿namespace Kodefu.Math
 {
     using System;
     using System.Linq;
@@ -18,6 +18,11 @@
         public static Vector<float, float> Add(this IVector<float, float> left, IVector<float, float> right)
         {
             return new Vector<float, float>(left.X + right.X, left.Y + right.Y);
+        }
+
+        public static Vector<T> Create<T>(T x)
+        {
+            return new Vector<T>(x);
         }
 
         public static Vector<T, T2> Create<T, T2>(T x, T2 y)
@@ -133,7 +138,12 @@
         {
             return new Vector<float, float>(left.X * right.X, left.Y * right.Y);
         }
-        
+
+        public static float Slope(this Vector2 vector)
+        {
+            return vector.X == 0 ? float.NaN : vector.Y / vector.X;
+        }
+
         public static Vector2 Subtract(this Vector2 left, Vector2 right)
         {
             return new Vector2(left.X - right.X, left.Y - right.Y);
