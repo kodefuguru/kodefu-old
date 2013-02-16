@@ -24,7 +24,7 @@
 
         public static implicit operator Radian(Degree degree)
         {
-            return new Radian(Constants.Pi / 180.0f * degree);
+            return new Radian(Float.Pi / 180.0f * degree);
         }
         
         public static implicit operator float(Radian radian)

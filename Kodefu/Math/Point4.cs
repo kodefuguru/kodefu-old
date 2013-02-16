@@ -124,7 +124,7 @@ namespace Kodefu.Math
 
         public static Segment4 operator +(Point4 left, Point4 right)
         {
-            return new Segment4(left, right); ;
+            return new Segment4(left, right);
         }              
     }
 }

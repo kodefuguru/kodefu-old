@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ArgumentCannotBeNull" xml:space="preserve">
+    <value>"{0}" cannot be null.</value>
+  </data>
+  <data name="ArgumentCannotBeNullOrEmpty" xml:space="preserve">
+    <value>"{0}" cannot be null or empty.</value>
+  </data>
+  <data name="ArgumentCannotBeNegativeOrZero" xml:space="preserve">
+    <value>"{0}" cannot be negative or zero.</value>
+  </data>
+  <data name="ArgumentCannotBeNegative" xml:space="preserve">
+    <value>"{0}" cannot be negative.</value>
+  </data>
+  <data name="CouldNotRetrieveTheTitle" xml:space="preserve">
+    <value>Could not retrieve the title</value>
+  </data>
+  <data name="IpAddressIsNotInValidFormat" xml:space="preserve">
+    <value>Ip address is not in valid format.</value>
+  </data>
+  <data name="IpAddressCannotBeBlank" xml:space="preserve">
+    <value>Ip address cannot be blank.</value>
+  </data>
+  <data name="SpecifiedIpAddressAlreadyExists" xml:space="preserve">
+    <value>Ip address "{0}" already exists.</value>
+  </data>
+  <data name="PrefixCannotBeBlank" xml:space="preserve">
+    <value>Prefix cannot be blank.</value>
+  </data>
+  <data name="PrefixMustBeAnUrl" xml:space="preserve">
+    <value>Prefix must be an url.</value>
+  </data>
+  <data name="SpecifiedPrefixAlreadyExists" xml:space="preserve">
+    <value>Prefix "{0}" already exists.</value>
+  </data>
+  <data name="SpecifiedAliasAlreadyExists" xml:space="preserve">
+    <value>Alias "{0}" already exists.</value>
+  </data>
+  <data name="AliasCannotBeBlank" xml:space="preserve">
+    <value>Alias cannot be blank.</value>
+  </data>
+  <data name="UserNameCannotBeBlank" xml:space="preserve">
+    <value>User name cannot be blank.</value>
+  </data>
+  <data name="EmailAddressIsNotInCorrectFormat" xml:space="preserve">
+    <value>Email address is not in correct format.</value>
+  </data>
+  <data name="UserDoesNotExist" xml:space="preserve">
+    <value>"{0}" user does not exist.</value>
+  </data>
+  <data name="UserIsCurrentlyLockedOut" xml:space="preserve">
+    <value>"{0}" user is currently locked out.</value>
+  </data>
+  <data name="StartIndexCannotBeNegative" xml:space="preserve">
+    <value>Start index cannot be negative.</value>
+  </data>
+  <data name="MaximumNumberOfUrlsMustBePositive" xml:space="preserve">
+    <value>Maximum number of urls must be positive.</value>
+  </data>
+  <data name="UrlCannotBeBlank" xml:space="preserve">
+    <value>Url cannot be blank.</value>
+  </data>
+  <data name="CannotShrinkUrlWhichMatchesWithOurBannedDomains" xml:space="preserve">
+    <value>Cannot shrink url which matches with our banned domains.</value>
+  </data>
+  <data name="UrlIsNotInValidFormat" xml:space="preserve">
+    <value>Url is not in valid format.</value>
+  </data>
+  <data name="AliasIsNotValidAliasCanOnlyContainAlphanumericCharacters" xml:space="preserve">
+    <value>Alias is not valid, alias can only contain alphanumeric characters.</value>
+  </data>
+  <data name="SpecifiedAliasMatchesWithOurReservedAlias" xml:space="preserve">
+    <value>"{0}" alias matches with our reserved alias. Please use a different alias.</value>
+  </data>
+  <data name="UserIsNotAllowedToAccessWithSpecifiedApiKey" xml:space="preserve">
+    <value>User is not allowed to access with apiKey "{0}".</value>
+  </data>
+  <data name="InvalidApiKey" xml:space="preserve">
+    <value>Invalid api key "{0}".</value>
+  </data>
+  <data name="ApiKeyCannotBeBlank" xml:space="preserve">
+    <value>Api key cannot be blank.</value>
+  </data>
+  <data name="UserHasAlreadyReachedYourDailyLimit" xml:space="preserve">
+    <value>User has already reached daily limit.</value>
+  </data>
+  <data name="UrlWithTheSpecifiedAliasDoesNotExist" xml:space="preserve">
+    <value>Url with the "{0}" alias does not exist.</value>
+  </data>
+  <data name="SpecifiedAliasIsAlreadyUsedByAnotherUrl" xml:space="preserve">
+    <value>Specified alias is already used by another url.</value>
+  </data>
+  <data name="CannotShrinkUrlForItsOwnDomain" xml:space="preserve">
+    <value>Cannot shrink url for its own domain.</value>
+  </data>
+  <data name="InvalidDelegateReferenceType" xml:space="preserve">
+    <value>Invalid delegate reference type.</value>
+  </data>
+  <data name="ExpressionCannotBeBlank" xml:space="preserve">
+    <value>Expression cannot be blank.</value>
+  </data>
+  <data name="SpecifiedExpressionAlreadyExists" xml:space="preserve">
+    <value>Expression "{0}" already exists.</value>
+  </data>
+  <data name="CannotGenerateApiKeyWhenApiAccessIsNotAllowed" xml:space="preserve">
+    <value>Cannot generate api key when api access is not allowed.</value>
+  </data>
+  <data name="UserWithSpecifiedApiKeyIsLockedOut" xml:space="preserve">
+    <value>User with "{0}" api key is currently locked out.</value>
+  </data>
+  <data name="UnableToHandleTheRequest" xml:space="preserve">
+    <value>Unable to handle the request.</value>
+  </data>
+  <data name="InvalidOpenIDUserName" xml:space="preserve">
+    <value>Invalid OpenID user name.</value>
+  </data>
+  <data name="OpenIDUserNameCannotBeBlank" xml:space="preserve">
+    <value>OpenID user name cannot be blank.</value>
+  </data>
+  <data name="SomethingUnholyGoingOn" xml:space="preserve">
+    <value>Something unholy going on!!!!</value>
+  </data>
+  <data name="UnableToLoginWithYourPreferredOpenIDProvider" xml:space="preserve">
+    <value>Unable to login with your preferred OpenID provider.</value>
+  </data>
+  <data name="VariableCannotBeNull" xml:space="preserve">
+    <value>"{0}" should not be null.</value>
+  </data>
+</root>

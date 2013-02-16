@@ -2,7 +2,7 @@ namespace Kodefu.Math
 {
     using System;
 
-    public struct Vector4 : IVector<float, float, float, float>, IEquatable<Vector<float, float, float, float>>, IEquatable<Vector4>
+    public struct Vector4 : IVector<float, float, float, float>, IEquatable<IVector<float, float, float, float>>, IEquatable<Vector<float, float, float, float>>, IEquatable<Vector4>
     {
         public static Vector4 Null
         {

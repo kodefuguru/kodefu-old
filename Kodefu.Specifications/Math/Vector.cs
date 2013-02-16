@@ -9,7 +9,7 @@
         protected static float x = 1;
         protected static float y = 2;
 
-        Establish that = () => vector = Vector.CreateF(x, y);
+        Establish that = () => vector = Vector.Create(x, y);
 
         It should_have_X_property_equal_x_variable = () => vector.X.Equals(x);
         It should_have_Y_property_equal_y_variable = () => vector.Y.Equals(y);

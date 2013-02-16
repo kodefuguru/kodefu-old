@@ -18,7 +18,7 @@
 
         public static implicit operator Degree(Radian radian)
         {
-            return new Degree(radian * (180.0f / Constants.Pi));
+            return new Degree(radian * (180.0f / Float.Pi));
         }
 
         public static Degree operator +(Degree left, Degree right)

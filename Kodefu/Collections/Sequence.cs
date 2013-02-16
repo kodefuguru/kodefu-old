@@ -7,6 +7,11 @@
     
     public static class Sequence
     {
+        public static IEnumerable<T> Coaelesce<T>(this IEnumerable<T> items)
+        {
+            return items ?? new T[0];
+        }
+        
         public static Sequence<T> Concat<T>(this Sequence<T> sequence, IEnumerable<T> other)
         {
             return new Sequence<T>(sequence.AsEnumerable().Concat(other));
@@ -17,9 +22,32 @@
             return Sequence.Concat<T>(sequence, (IEnumerable<T>)items);
         }
 
+        public static Sequence<T> Create<T>(this IEnumerable<T> items)
+        {
+            return new Sequence<T>(items);
+        }
+
+        public static Sequence<T> Create<T>(params T[] items)
+        {
+            return new Sequence<T>(items);
+        }
+
+        public static void ForEach<T>(this IEnumerable<T> items, Action<T> action)
+        {
+            foreach (T item in items)
+            {
+                action(item);
+            }
+        }
+
         public static Sequence<T> Empty<T>()
         {
             return new Sequence<T>();
+        }
+
+        public static bool Empty<T>(this IEnumerable<T> sequence)
+        {
+            return !sequence.Any();
         }
 
         public static Sequence<T> Prepend<T>(this Sequence<T> sequence, IEnumerable<T> other)
@@ -50,11 +78,11 @@
 
     public struct Sequence<T> : IEnumerable<T>
     {
-        private readonly IEnumerable<T> list;
+        private readonly IEnumerable<T> value;
 
         public Sequence(IEnumerable<T> sequence)
         {
-            this.list = sequence;
+            this.value = sequence;
         }
 
         public Sequence<TResult> Cast<TResult>()
@@ -69,7 +97,7 @@
 
         public IEnumerator<T> GetEnumerator()
         {
-            return (this.list ?? new T[0]).GetEnumerator();
+            return (this.value ?? new T[0]).GetEnumerator();
         }
 
         public static implicit operator Sequence<T>(T[] array)

@@ -40,17 +40,17 @@
             return new Vector<T, T2, T3, T4>(x, y, z, w);
         }
         
-        public static Vector2 CreateF(float x, float y)
+        public static Vector2 Create(float x, float y)
         {
             return new Vector2(x, y);
         }
 
-        public static Vector3 CreateF(float x, float y, float z)
+        public static Vector3 Create(float x, float y, float z)
         {
             return new Vector3(x, y, z);
         }
 
-        public static Vector4 CreateF(float x, float y, float z, float w)
+        public static Vector4 Create(float x, float y, float z, float w)
         {
             return new Vector4(x, y, z, w);
         }
@@ -160,7 +160,7 @@
         }
     }
 
-    public struct Vector<T> : IVector<T>, IEquatable<Vector<T>>
+    public struct Vector<T> : IVector<T>, IEquatable<IVector<T>>, IEquatable<Vector<T>>
     {
         public static Vector<T> Null
         {
@@ -228,7 +228,7 @@
         }
     }
 
-    public struct Vector<T, T2> : IVector<T, T2>, IEquatable<Vector<T, T2>>
+    public struct Vector<T, T2> : IVector<T, T2>, IEquatable<IVector<T, T2>>, IEquatable<Vector<T, T2>>
     {
         public static Vector<T, T2> Null
         {
@@ -303,7 +303,7 @@
         }
     }
 
-    public struct Vector<T, T2, T3> : IVector<T, T2, T3>, IEquatable<Vector<T, T2, T3>>
+    public struct Vector<T, T2, T3> : IVector<T, T2, T3>, IEquatable<IVector<T, T2, T3>>, IEquatable<Vector<T, T2, T3>>
     {
         public static Vector<T, T2, T3> Null
         {
@@ -383,7 +383,7 @@
         }
     }
 
-    public struct Vector<T, T2, T3, T4> : IVector<T, T2, T3, T4>, IEquatable<Vector<T, T2, T3, T4>>
+    public struct Vector<T, T2, T3, T4> : IVector<T, T2, T3, T4>, IEquatable<IVector<T, T2, T3, T4>>, IEquatable<Vector<T, T2, T3, T4>>
     {
         public static Vector<T, T2, T3, T4> Null
         {

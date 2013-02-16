@@ -55,6 +55,13 @@
             return () => func(arg1, arg2, arg3, arg4);
         }
 
+        public static Func<T, TResult2> As<T, TResult, TResult2>(this Func<T, TResult> func)
+            where TResult : class
+            where TResult2 : class
+        {
+            return a => func(a) as TResult2;
+        }
+
         public static Func<T, Func<T2, TResult>> Curry<T, T2, TResult>(this Func<T, T2, TResult> func)
         {
             return a => b => func(a, b);
@@ -68,6 +75,51 @@
         public static Func<T, Func<T2, Func<T3, Func<T4, TResult>>>> Curry<T, T2, T3, T4, TResult>(this Func<T, T2, T3, T4, TResult> func)
         {
             return a => b => c => d => func(a, b, c, d);
+        }
+
+        public static Func<T, T> Identity<T>()
+        {
+            return a => a;
+        }
+
+        public static Func<TResult> Returns<TResult>(this Action action, TResult result)
+        {
+            return () => { action(); return result; };
+        }
+
+        public static Func<T, TResult> Returns<T, TResult>(this Action<T> action, TResult result)
+        {
+            return a => { action(a); return result; };
+        }
+
+        public static Func<T, T2, TResult> Returns<T, T2, TResult>(this Action<T, T2> action, TResult result)
+        {
+            return (a, b) => { action(a, b); return result; };
+        }
+
+        public static Func<T, T2, T3, TResult> Returns<T, T2, T3, TResult>(this Action<T, T2, T3> action, TResult result)
+        {
+            return (a, b, c) => { action(a, b, c); return result; };
+        }
+
+        public static Func<T, T2, T3, T4, TResult> Returns<T, T2, T3, T4, TResult>(this Action<T, T2, T3, T4> action, TResult result)
+        {
+            return (a, b, c, d) => { action(a, b, c, d); return result; };
+        }
+
+        public static Func<T, T2, T3, T4, T5, TResult> Returns<T, T2, T3, T4, T5, TResult>(this Action<T, T2, T3, T4, T5> action, TResult result)
+        {
+            return (a, b, c, d, e) => { action(a, b, c, d, e); return result; };
+        }
+
+        public static Func<T, T2, T3, T4, T5, T6, TResult> Returns<T, T2, T3, T4, T5, T6, TResult>(this Action<T, T2, T3, T4, T5, T6> action, TResult result)
+        {
+            return (a, b, c, d, e, f) => { action(a, b, c, d, e, f); return result; };
+        }
+
+        public static Func<T, T2, T3, T4, T5, T6, T7, TResult> Returns<T, T2, T3, T4, T5, T6, T7, TResult>(this Action<T, T2, T3, T4, T5, T6, T7> action, TResult result)
+        {
+            return (a, b, c, d, e, f, g) => { action(a, b, c, d, e, f, g); return result; };
         }
 
         public static Func<T, TResult2> Select<T, TResult, TResult2>(this Func<T, TResult> func, Func<TResult, TResult2> selector)
@@ -90,6 +142,16 @@
             return (a, b, c, d) => selector(func(a, b, c, d));
         }
 
+        public static Func<T, T2, T3, T4, T5, TResult2> Select<T, T2, T3, T4, T5, TResult, TResult2>(this Func<T, T2, T3, T4, T5, TResult> func, Func<TResult, TResult2> selector)
+        {
+            return (a, b, c, d, e) => selector(func(a, b, c, d, e));
+        }
+
+        public static Func<T, T2, T3, T4, T5, T6, TResult2> Select<T, T2, T3, T4, T5, T6, TResult, TResult2>(this Func<T, T2, T3, T4, T5, T6, TResult> func, Func<TResult, TResult2> selector)
+        {
+            return (a, b, c, d, e, f) => selector(func(a, b, c, d, e, f));
+        }
+        
         public static Func<T, T2, TResult3> SelectMany<T, T2, TResult, TResult2, TResult3>(this Func<T, TResult> left, Func<T2, TResult2> right, Func<TResult, TResult2, TResult3> selector)
         {
             return (a, b) => selector(left(a), right(b));

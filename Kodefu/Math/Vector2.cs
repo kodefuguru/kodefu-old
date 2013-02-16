@@ -2,7 +2,7 @@ namespace Kodefu.Math
 {
     using System;
 
-    public struct Vector2 : IVector<float, float>, IEquatable<Vector<float, float>>, IEquatable<Vector2>
+    public struct Vector2 : IVector<float, float>, IEquatable<IVector<float, float>>, IEquatable<Vector<float, float>>, IEquatable<Vector2>
     {
         public static Vector2 Null
         {
@@ -70,7 +70,7 @@ namespace Kodefu.Math
 
         public override int GetHashCode()
         {
-            return (this.X + this.Y).GetHashCode();
+            return (this.x + this.y).GetHashCode();
         }
 
         public override string ToString()
@@ -80,12 +80,12 @@ namespace Kodefu.Math
 
         public static implicit operator Vector<float, float>(Vector2 vector)
         {
-            return new Vector<float, float>(vector.X, vector.Y);
+            return new Vector<float, float>(vector.x, vector.y);
         }
 
         public static implicit operator Tuple<float, float>(Vector2 vector)
         {
-            return Tuple.Create(vector.X, vector.Y);
+            return Tuple.Create(vector.x, vector.y);
         }
 
         public static implicit operator Vector2(Vector<float, float> vector)
@@ -96,6 +96,11 @@ namespace Kodefu.Math
         public static implicit operator Vector2(Point2 point)
         {
             return new Vector2(point.X, point.Y);
+        }
+
+        public static implicit operator Func<Vector2>(Vector2 vector)
+        {
+            return () => vector;
         }
 
         public static implicit operator Vector2(Tuple<float, float> tuple)

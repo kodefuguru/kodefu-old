@@ -50,6 +50,28 @@
             
             expected = new[] { 1, 2, 3, 1, 2 };
             resultTuples.Cast<int>().Should().ContainInOrder(expected);
+
+            seq = new[] { 1, 2 };
+            int[] arr = new[] { 8, 9 };
+            int num = 5;
+
+            var seqSeq = seq + seq;
+            var seqNum = seq + num;
+            var numSeq = num + seq;
+            var seqArr = seq + arr;
+            var arrSeq = arr + seq;
+
+            seqSeq.Should().BeOfType<Sequence<int>>();
+            seqNum.Should().BeOfType<Sequence<int>>();
+            numSeq.Should().BeOfType<Sequence<int>>();
+            seqArr.Should().BeOfType<Sequence<int>>();
+            arrSeq.Should().BeOfType<Sequence<int>>();
+
+            seqSeq.Should().ContainInOrder(1, 2, 1, 2);
+            seqNum.Should().ContainInOrder(1, 2, 5);
+            numSeq.Should().ContainInOrder(5, 1, 2);
+            seqArr.Should().ContainInOrder(1, 2, 8, 9);
+            arrSeq.Should().ContainInOrder(8, 9, 1, 2);
         }
     }
 }

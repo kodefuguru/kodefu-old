@@ -33,11 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Assertion\Assert.cs" />
+    <Compile Include="Assertion\TextMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\Collection.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="DelegateCommand.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="ICoalesce.cs" />
+    <Compile Include="Identity.cs" />
+    <Compile Include="IGeneratable.cs" />
+    <Compile Include="IGenerator.cs" />
+    <Compile Include="IIdentity.cs" />
+    <Compile Include="Injection\DependencyResolverFactory.cs" />
+    <Compile Include="Injection\IDependencyResolver.cs" />
+    <Compile Include="Injection\IDependencyResolverFactory.cs" />
+    <Compile Include="Injection\Injector.cs" />
     <Compile Include="ITransform.cs" />
+    <Compile Include="Math\Calculate.cs" />
+    <Compile Include="Math\Filter.cs" />
+    <Compile Include="Math\Float.cs" />
+    <Compile Include="Math\FloatMovingAverage.cs" />
+    <Compile Include="Math\IMovingAverage.cs" />
     <Compile Include="Math\Line.cs" />
     <Compile Include="Math\Line2.cs" />
     <Compile Include="Math\Triangle.cs" />
@@ -52,7 +73,6 @@
     <Compile Include="Math\Point.cs" />
     <Compile Include="Math\Point2.cs" />
     <Compile Include="Math\Degree.cs" />
-    <Compile Include="Math\Constants.cs" />
     <Compile Include="Math\Radian.cs" />
     <Compile Include="Math\Segment2.cs" />
     <Compile Include="Math\Triangle2.cs" />
@@ -68,6 +88,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Collections\Sequence.cs" />
     <Compile Include="Math\Vector.cs" />
+    <Compile Include="Reflect.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="SystemTime.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assertion\TextMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

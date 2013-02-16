@@ -78,8 +78,6 @@ namespace Kodefu.Math
         /// <summary>
         /// Perpendicular line at same y-intercept
         /// </summary>
-        /// <param name="line"></param>
-        /// <returns></returns>
         public static Line2 operator -(Line2 line)
         {
             return new Line2(1 / -line.slope, line.yIntercept);            
